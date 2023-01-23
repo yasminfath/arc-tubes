@@ -44,7 +44,7 @@ button {
             </div>
             <div class="col-md-12 mb-3">
                 <div class="form-group">
-                    <p class="text-center"><a href="login.html" id="signin">Already have an account?</a></p>
+                    <p class="text-center"><a href="<?= base_url('loginSystem/login') ?>" id="signin">Already have an account?</a></p>
                 </div>
             </div>
     </div>

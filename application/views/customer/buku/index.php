@@ -41,29 +41,10 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                     <div class="card-body">
                         <h5 class="card-title">'.$buku['judul_buku'].'</h5>
                         <p class="card-text"> </p>
-                            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
-                                Lihat Detail
-                            </button>
-                                <form action="'. base_url('customer/beli') .'" method="get">
-                                    <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
-                                    <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
-                                        <div class="modal-content">
-                                        <div class="modal-header">
-                                            <h1 class="modal-title fs-5" id="staticBackdropLabel">'.$buku['judul_buku'].'</h1>
-                                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                                        </div>
-                                        <div class="modal-body">
-                                            '.$buku['deskripsi_buku'].'
-                                        </div>
-                                        <div class="modal-footer">
-                                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Tutup</button>
-                                            <input type="hidden" name="id_buku" value ="'. $buku['id_buku'] .'">
-                                            <td><input type="submit" value="Masukkan Keranjang" class="btn btn-primary data-bs-toggle="modal" data-bs-target="#exampleModal" ><td>
-                                        </div>
-                                        </div>
-                                    </div>
-                                    </div>
-                                </form>
+                        <form action="'. base_url('customer/beli') .'" method="get">
+                            <input type="hidden" name="id_buku" value ="'. $buku['id_buku'] .'">
+                            <td><input type="submit" value="Beli" class="btn btn-primary data-bs-toggle="modal" data-bs-target="#exampleModal" ><td>
+                        </form>
                     </div>
                     </div>
                     </div>';
