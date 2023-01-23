@@ -6,16 +6,22 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 <html lang="en">
 
 <head>
-    <title>Sistem Perpustakaan</title>
+<title>Tambah Koleksi Buku</title>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="<?php echo base_url('assets/isian-style.css'); ?>" type="text/css" >
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"  />
 </head>
 
 <body>
-    <div class="d-flex" id="wrapper">
-        <?php $this->load->view('navbar'); ?>
+    <?php $this->load->view('navbar'); ?>
+    <div id="wrapper">
         <div class="row">
             <div class="col">
             <div class="container-fluid">
-            <h3 class="fs-4 mb-3">Tambah Koleksi Buku</h3>
+            <h3 class="fs-4 mb-3">TAMBAH KOLEKSI BUKU</h3>
                 <form action="<?= base_url('seller/submit_tambah_buku') ?>" method="POST" enctype="multipart/form-data">
                     <div class="form-group mb-3">
                         <label class="col-1 col-form-label">Kode Buku</label>
